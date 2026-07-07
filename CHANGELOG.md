@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.74.0](https://github.com/werf/werf/compare/v2.73.2...v2.74.0) (2026-07-07)
+
+
+### Features
+
+* **build, stapel:** deprecate fromImage and import.image directives ([#7628](https://github.com/werf/werf/issues/7628)) ([b064fd5](https://github.com/werf/werf/commit/b064fd52edbef1c7e18620e78cb9c76b30cd6b10))
+* **ci-env:** auto-detect DOCKER_AUTH_CONFIG to enable --use-docker-auth-config ([#7624](https://github.com/werf/werf/issues/7624)) ([7754d6b](https://github.com/werf/werf/commit/7754d6bc68ad19add5e5ff02a3cb02c10f21d024))
+* **deploy:** add `werf.io/resource-policy` annotation ([#7613](https://github.com/werf/werf/issues/7613)) ([72ae0f2](https://github.com/werf/werf/commit/72ae0f24ea745a81c61656d1c25df8dace2538f6))
+* **deploy:** enable specific images params by default for converge/plan ([#7616](https://github.com/werf/werf/issues/7616)) ([21e7159](https://github.com/werf/werf/commit/21e71590ea0644e8e9c10573aab0fd4fbc468b69))
+* **deploy:** make container backend optional for converge and render ([#7625](https://github.com/werf/werf/issues/7625)) ([1230498](https://github.com/werf/werf/commit/1230498c6dfb16e8c46c76d0d0c8329d80873013))
+* **stapel, build:** embed stapel ([#7601](https://github.com/werf/werf/issues/7601)) ([82a8117](https://github.com/werf/werf/commit/82a81175bf678e749b145f2f5e468c3ee018ef75))
+
+
+### Bug Fixes
+
+* **build, stapel, git:** remove git commit ancestry check on stage reuse ([#7615](https://github.com/werf/werf/issues/7615)) ([70ee990](https://github.com/werf/werf/commit/70ee990c7d5b9eb02c806de4c1538d6d588c99d8))
+* **build:** avoid splitting UTF-8 runes across parallel worker log reads ([#7632](https://github.com/werf/werf/issues/7632)) ([14fddc6](https://github.com/werf/werf/commit/14fddc6015ca8b53eeff0f3faf21c4d2433a14dc))
+* **build:** default --final-images-only to true for consistency ([#7618](https://github.com/werf/werf/issues/7618)) ([52f4033](https://github.com/werf/werf/commit/52f403390e65cdaf24bd66a876235e79d97decd8))
+* **build:** error on ambiguous trailing slash in export/import to: path ([#7627](https://github.com/werf/werf/issues/7627)) ([0f7a4e3](https://github.com/werf/werf/commit/0f7a4e35ad0c0b27941f19d45d52911eb794677a))
+* **build:** send valid empty tar for docker from:scratch import ([#7609](https://github.com/werf/werf/issues/7609)) ([1c59585](https://github.com/werf/werf/commit/1c5958506a960167c76dede2cfa88ed130db1d12))
+* **build:** stop leaking build-time env vars into final image config ([#7620](https://github.com/werf/werf/issues/7620)) ([02a8cb0](https://github.com/werf/werf/commit/02a8cb0be93641b832f782c12fb6a01aa91c3abe))
+* **build:** use jsonmessage API to parse image load response ([5fe36bc](https://github.com/werf/werf/commit/5fe36bc78ecabe6b58439eca16ca9f82869264d1))
+* **bundle:** update .Values.global.werf.images during bundle copy ([#7600](https://github.com/werf/werf/issues/7600)) ([cf2fb96](https://github.com/werf/werf/commit/cf2fb96d2de01c13d8c733589cb02262eb9521b1))
+* **deploy:** `werf.io/resource-policy` should only respect skip-delete from live ([#7623](https://github.com/werf/werf/issues/7623)) ([f261028](https://github.com/werf/werf/commit/f261028ca4b92b48ef9e26c353c0adade1e331ea))
+* **deploy:** use chartcommon.File after main merge in copy_test ([473c07e](https://github.com/werf/werf/commit/473c07ea807565559137081767341c3c5d3d43d9))
+* **host-cleanup:** GC stale host lock files on cleanup ([#7619](https://github.com/werf/werf/issues/7619)) ([1c8eb88](https://github.com/werf/werf/commit/1c8eb885b6b1a941d24ca68f3981352e9063901b))
+* **test:** update e2e fixtures for v3 external image tag and trailing-slash rules ([9ef0cc4](https://github.com/werf/werf/commit/9ef0cc4a106b535cf6634a2c47947a56ae68ff45))
+
 ## [2.73.2](https://github.com/werf/werf/compare/v2.73.1...v2.73.2) (2026-07-01)
 
 
